@@ -1,0 +1,294 @@
+/* Add your CSS code here  */
+:root {
+  --background-color: #ffffff;
+  --white: #ffffff;
+  --graphite: #353535;
+  --pale-slate: #d2d7df;
+  --silver: #bdbbb0;
+  --grey-olive: #8a897c;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--graphite);
+  line-height: 1.6;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/* Navigation Styles */
+.nav {
+  background-color: var(--graphite);
+  color: var(--white);
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 1.5rem;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--silver);
+  transition: background 0.5s, color 0.5s;
+}
+
+.nav-link:hover {
+  background-color: var(--silver);
+  color: var(--graphite);
+}
+
+/* About Content */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about-image {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+}
+
+.accent-line {
+  width: 120px;
+  height: 4px;
+  background: var(--grey-olive);
+  border-radius: 999px;
+  margin: 1rem 0;
+}
+
+.h1 {
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h4 {
+  font-size: 1.5em;
+  color: var(--grey-olive);
+  margin-bottom: 0;
+}
+
+.h5 {
+  font-size: 1em;
+  color: var(--grey-olive);
+  margin: 0;
+}
+
+/* Main area style */
+
+.main-heading {
+  margin: 2rem;
+  text-align: center;
+  color: var(--gothic-gray-blue);
+}
+
+.font-cinzel {
+  font-family: "Cinzel";
+}
+
+/* grey background circle */
+.background-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+
+  background: var(--silver);
+  border-radius: 50%;
+  top: -250px;
+  left: -250px;
+
+  z-index: -1;
+}
+
+.profile-circle {
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 12px solid #ffffff;
+
+  position: relative;
+  z-index: -1;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section Styles */
+.section {
+  margin-top: 2rem;
+}
+
+.h2 {
+  border-bottom: 1px solid var(--gray-border);
+}
+
+/* Book List Styles */
+
+.books-list li {
+  margin-bottom: 0.5rem;
+}
+
+.books-list li > ol {
+  margin-top: 0.4rem;
+}
+
+.images-container {
+  text-align: center;
+}
+
+.books-image {
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.books-image:hover {
+  transform: scale(1.1);
+}
+
+/* Table Style */
+.table {
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  border: 1px solid var(--gray-border);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--table-background);
+}
+
+.table-heading {
+  background-color: var(--table-emphasis-background);
+}
+
+.table-footer {
+  font-weight: bold;
+  background-color: var(--table-emphasis-background);
+}
+
+/* Form - IRA ROTH calculator */
+
+.form-container {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--form-white);
+}
+
+.color-bg-blue {
+  background-color: var(--midnight-blue-dark);
+}
+
+.main-heading-form {
+  text-align: center;
+  color: var(--midnight-blue);
+}
+
+.form-element {
+  margin-bottom: 0.5rem;
+}
+
+.form-label {
+  display: inline-block;
+  width: 48%;
+}
+
+.form-input {
+  display: inline-block;
+  width: 44%;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.form-radios {
+  margin-left: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.form-element:last-of-type {
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  width: 49%;
+  border: 0;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  background-color: var(--midnight-blue);
+  color: var(--form-white);
+}
+
+.btn-submit:hover {
+  background-color: var(--midnight-blue-dark);
+}
+
+.form-note {
+  font-size: 0.8rem;
+}
+
+.form-note a {
+  color: var(--midnight-blue);
+}
