@@ -6,10 +6,11 @@
   --pale-slate: #d2d7df;
   --silver: #bdbbb0;
   --grey-olive: #8a897c;
+  --circle-size: clamp(400px, 45vw, 700px);
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   background-color: var(--background-color);
   color: var(--graphite);
@@ -26,6 +27,7 @@ fieldset {
 .nav {
   background-color: var(--graphite);
   color: var(--white);
+  z-index: 1;
 }
 
 .logo {
@@ -77,22 +79,19 @@ fieldset {
 /* About Content */
 .about-container {
   display: grid;
+  width: min(90vw, 1200px); /* margin left and right, lots of white space on ultra wide monitors */
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
-
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+
+  border: 3px solid red;
 }
 
 .about-image {
   position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 700px;
+  width: clamp(350px, 45vw, 700px);
+  aspect-ratio: 1;
 }
 
 .accent-line {
@@ -104,7 +103,7 @@ fieldset {
 }
 
 .h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -123,172 +122,45 @@ fieldset {
 
 /* Main area style */
 
-.main-heading {
-  margin: 2rem;
-  text-align: center;
-  color: var(--gothic-gray-blue);
-}
-
-.font-cinzel {
-  font-family: "Cinzel";
+.font-inter {
+  font-family: "Inter";
 }
 
 /* grey background circle */
 .background-circle {
   position: absolute;
-  width: 600px;
-  height: 600px;
 
-  background: var(--silver);
+  width: var(--circle-size);
+  aspect-ratio: 1;
+
   border-radius: 50%;
-  top: -250px;
-  left: -250px;
+  background: var(--silver);
+
+  top: -150px;
+  left: -150px;
 
   z-index: -1;
 }
 
 .profile-circle {
-  width: 400px;
-  height: 400px;
+  position: absolute;
+
+  width: calc(var(--circle-size) * 0.65);
+  aspect-ratio: 1;
 
   border-radius: 50%;
   overflow: hidden;
 
-  border: 12px solid #ffffff;
+  border: 12px solid white;
 
-  position: relative;
-  z-index: -1;
+  top: 100px;
+  left: 180px;
+
+  z-index: 1;
 }
 
 .profile-circle img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Section Styles */
-.section {
-  margin-top: 2rem;
-}
-
-.h2 {
-  border-bottom: 1px solid var(--gray-border);
-}
-
-/* Book List Styles */
-
-.books-list li {
-  margin-bottom: 0.5rem;
-}
-
-.books-list li > ol {
-  margin-top: 0.4rem;
-}
-
-.images-container {
-  text-align: center;
-}
-
-.books-image {
-  border-radius: 5px;
-  transition: transform 0.2s ease;
-}
-
-.books-image:hover {
-  transform: scale(1.1);
-}
-
-/* Table Style */
-.table {
-  border-collapse: collapse;
-}
-
-.table td,
-.table th {
-  border: 1px solid var(--gray-border);
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.table tr:nth-child(even) {
-  background-color: var(--table-background);
-}
-
-.table-heading {
-  background-color: var(--table-emphasis-background);
-}
-
-.table-footer {
-  font-weight: bold;
-  background-color: var(--table-emphasis-background);
-}
-
-/* Form - IRA ROTH calculator */
-
-.form-container {
-  max-width: 420px;
-  margin: 100px auto;
-  padding: 2rem;
-  border-radius: 10px;
-  background-color: var(--form-white);
-}
-
-.color-bg-blue {
-  background-color: var(--midnight-blue-dark);
-}
-
-.main-heading-form {
-  text-align: center;
-  color: var(--midnight-blue);
-}
-
-.form-element {
-  margin-bottom: 0.5rem;
-}
-
-.form-label {
-  display: inline-block;
-  width: 48%;
-}
-
-.form-input {
-  display: inline-block;
-  width: 44%;
-  border: 1px solid var(--gray-border);
-  border-radius: 6px;
-  padding: 0.5rem;
-}
-
-.form-radios {
-  margin-left: 40px;
-  margin-bottom: 0.75rem;
-}
-
-.form-element:last-of-type {
-  margin: 2rem 0;
-}
-
-.btn {
-  display: inline-block;
-  width: 49%;
-  border: 0;
-  padding: 0.65rem 1rem;
-  border-radius: 6px;
-}
-
-.btn-submit {
-  background-color: var(--midnight-blue);
-  color: var(--form-white);
-}
-
-.btn-submit:hover {
-  background-color: var(--midnight-blue-dark);
-}
-
-.form-note {
-  font-size: 0.8rem;
-}
-
-.form-note a {
-  color: var(--midnight-blue);
 }
