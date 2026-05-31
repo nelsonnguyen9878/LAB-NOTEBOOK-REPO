@@ -17,6 +17,11 @@ body {
   line-height: 1.6;
 }
 
+/* Fonts */
+.font-inter {
+  font-family: "Inter";
+}
+
 fieldset {
   margin: 0;
   border: 0;
@@ -85,7 +90,6 @@ fieldset {
   align-items: start;
   margin: 0 auto;
 
-  border: 3px solid red;
 }
 
 .about-image {
@@ -110,7 +114,7 @@ fieldset {
 
 .h4 {
   font-size: 1.5em;
-  color: var(--grey-olive);
+  color: var(--silver);
   margin-bottom: 0;
 }
 
@@ -120,10 +124,33 @@ fieldset {
   margin: 0;
 }
 
-/* Main area style */
 
-.font-inter {
-  font-family: "Inter";
+/* Connect Row */
+ .connect-row {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+} 
+
+.connect-btn {
+  background-color: var(--grey-olive);
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+
+
+  text-decoration: none;
+
+
+  color: var(--white);
+}
+
+.icon-btn {
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: var(--graphite);
 }
 
 /* grey background circle */
